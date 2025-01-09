@@ -11,6 +11,8 @@
 npm-debug.log
 yarn-error.log
 
+/public/salfai.jpg
+
 # IDEs and editors
 .idea/
 .project

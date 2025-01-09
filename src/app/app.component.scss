@@ -1,0 +1,100 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    overflow-y: hidden;
+}
+
+html {
+    background-color: rgba(0, 0, 0, 0.183);
+}
+
+.container {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    gap: 50px;
+}
+
+.sub-container {
+    border: 2px solid lightblue;
+    padding: 15px;
+    border-radius: 20px;
+    background-color: #fff;
+}
+
+.social-links {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.profile-infos {
+    margin-bottom: 30px;
+}
+.social-links app-social-link  {
+    background: rgba(0, 0, 0, 0.265);
+    // display: inline-block;
+    padding: 10px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+/* parent.component.css */
+.social-links app-social-link {
+    transition: color 0.3s ease, background-color 0.3s ease;
+}
+
+.social-links app-social-link.snapchat:hover {
+    background-color: #fffc00;
+    color: #fff;
+    /* Snapchat yellow */
+}
+.social-links app-social-link.snapchat {
+    color: #fffc00;
+    /* Snapchat yellow */
+}
+
+.social-links app-social-link.github:hover {
+    background-color: #333;
+    color: #fff;
+    /* Github black */
+}
+.social-links app-social-link.github {
+    color: #333;
+    /* Github black */
+}
+
+.social-links app-social-link.twitter:hover {
+    background-color: #1da1f2;
+    color: #fff;
+    /* Twitter blue */
+}
+.social-links app-social-link.twitter {
+    color: #1da1f2;
+    /* Twitter blue */
+}
+
+.social-links app-social-link.linkedin:hover {
+    background-color: #0077b5;
+    color: #fff;
+    /* LinkedIn blue */
+}
+.social-links app-social-link.linkedin {
+    color: #0077b5;
+    /* LinkedIn blue */
+}
+
+.social-links app-social-link {
+    cursor: pointer;
+}
+
+.selected-link {
+    text-align: center;
+    padding: 10px;
+    text-decoration: underline;
+}

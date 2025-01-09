@@ -1,3 +1,18 @@
-<div>
-  <h1>User Profile</h1>
+<div class="container">
+  <div class="sub-container">
+    <!-- <h1>User Profile</h1> -->
+    <div>
+      <div class="profile-infos">
+        <app-user-profile></app-user-profile>
+        <app-user-location></app-user-location>
+      </div>
+      <div class="social-links">
+        <app-social-link [link]="'Snapchat'" (clickedLink)="onClickedLink($event)" class="snapchat"></app-social-link>
+        <app-social-link [link]="'Github'" (clickedLink)="onClickedLink($event)" class="github"></app-social-link>
+        <app-social-link [link]="'Twitter'" (clickedLink)="onClickedLink($event)" class="twitter"></app-social-link>
+        <app-social-link [link]="'LinkedIn'" (clickedLink)="onClickedLink($event)" class="linkedin"></app-social-link>
+      </div>      
+    </div>
+    <div class="selected-link">You selected : {{selectedLink}} </div>
+  </div>
 </div>

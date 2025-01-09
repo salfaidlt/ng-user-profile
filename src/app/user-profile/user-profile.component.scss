@@ -1,0 +1,19 @@
+.user-profile-photo {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: 2px solid lightblue;
+}
+
+.user-profile-name {
+    font-size: large;
+    font-weight: bold;
+}
+
+.user-profile-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 0;
+}
