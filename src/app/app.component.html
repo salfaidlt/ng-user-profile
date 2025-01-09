@@ -7,12 +7,15 @@
         <app-user-location></app-user-location>
       </div>
       <div class="social-links">
-        <app-social-link [link]="'Snapchat'" (clickedLink)="onClickedLink($event)" class="snapchat"></app-social-link>
-        <app-social-link [link]="'Github'" (clickedLink)="onClickedLink($event)" class="github"></app-social-link>
-        <app-social-link [link]="'Twitter'" (clickedLink)="onClickedLink($event)" class="twitter"></app-social-link>
-        <app-social-link [link]="'LinkedIn'" (clickedLink)="onClickedLink($event)" class="linkedin"></app-social-link>
+        @for (link of linkTab; track $index) {
+          <app-social-link [link]="link" (clickedLink)="onClickedLink($event)" [class]="link"></app-social-link>
+        }
       </div>      
     </div>
-    <div class="selected-link">You selected : {{selectedLink}} </div>
+    @if (selectedLink != '') {
+      <div class="selected-link">You selected {{selectedLink}} </div>
+    } @else {
+      <div class="selected-link">please select a link</div>
+    }
   </div>
 </div>

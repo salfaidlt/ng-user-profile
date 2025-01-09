@@ -49,42 +49,42 @@ html {
     transition: color 0.3s ease, background-color 0.3s ease;
 }
 
-.social-links app-social-link.snapchat:hover {
+.social-links app-social-link.Snapchat:hover {
     background-color: #fffc00;
     color: #fff;
     /* Snapchat yellow */
 }
-.social-links app-social-link.snapchat {
+.social-links app-social-link.Snapchat {
     color: #fffc00;
     /* Snapchat yellow */
 }
 
-.social-links app-social-link.github:hover {
+.social-links app-social-link.Github:hover {
     background-color: #333;
     color: #fff;
     /* Github black */
 }
-.social-links app-social-link.github {
+.social-links app-social-link.Github {
     color: #333;
     /* Github black */
 }
 
-.social-links app-social-link.twitter:hover {
+.social-links app-social-link.Twitter:hover {
     background-color: #1da1f2;
     color: #fff;
     /* Twitter blue */
 }
-.social-links app-social-link.twitter {
+.social-links app-social-link.Twitter {
     color: #1da1f2;
     /* Twitter blue */
 }
 
-.social-links app-social-link.linkedin:hover {
+.social-links app-social-link.Linkedin:hover {
     background-color: #0077b5;
     color: #fff;
     /* LinkedIn blue */
 }
-.social-links app-social-link.linkedin {
+.social-links app-social-link.Linkedin {
     color: #0077b5;
     /* LinkedIn blue */
 }
@@ -96,5 +96,4 @@ html {
 .selected-link {
     text-align: center;
     padding: 10px;
-    text-decoration: underline;
 }

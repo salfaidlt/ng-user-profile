@@ -13,7 +13,8 @@ import { SocialLinkComponent } from "./social-link/social-link.component";
 export class AppComponent {
   title = 'user-profile';
   selectedLink = '';
+  linkTab: string[] = ['Snapchat', 'Linkedin', 'Github', 'Twitter']
   onClickedLink(link: string) {
-    this.selectedLink = link;
+    this.selectedLink = link
   }
 }
