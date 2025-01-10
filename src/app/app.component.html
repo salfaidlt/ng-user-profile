@@ -7,15 +7,20 @@
         <app-user-location></app-user-location>
       </div>
       <div class="social-links">
-        @for (link of linkTab; track $index) {
-          <app-social-link [link]="link" (clickedLink)="onClickedLink($event)" [class]="link"></app-social-link>
+        @for (socialLink of linkTab; track $index) {
+        <app-social-link [socialLink]="socialLink" (clickedLink)="onClickedLink($event)"
+          [class]="socialLink.name"></app-social-link>
+        } @empty {
+          <p class="links-un_">Links unavailable</p>
         }
-      </div>      
+      </div>
     </div>
-    @if (selectedLink != '') {
-      <div class="selected-link">You selected {{selectedLink}} </div>
+  </div>
+  <div class="reset-selection" (click)="onResetLink()">
+    @if (selectedLink.link != "") {
+    <div class="selected-link">You selected <span>{{selectedLink.link}}</span> </div>
     } @else {
-      <div class="selected-link">please select a link</div>
+    <div class="selected-link">please select a link</div>
     }
   </div>
 </div>

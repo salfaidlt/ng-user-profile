@@ -1,5 +1,6 @@
-import { Component, EventEmitter, Input, NgModule, Output } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { LucideAngularModule } from 'lucide-angular';
+import SocialLink from '../../models/social-links';
 
 @Component({
   selector: 'app-social-link',
@@ -8,14 +9,14 @@ import { LucideAngularModule } from 'lucide-angular';
   styleUrl: './social-link.component.scss'
 })
 export class SocialLinkComponent {
-  @Input() link: string = 'default';
-  @Output() clickedLink = new EventEmitter<string>();
+  @Input() socialLink: SocialLink | undefined;
+  @Output() clickedLink = new EventEmitter<SocialLink>();
 
   getClickedLink() {
-    this.clickedLink.emit(this.link);
+    this.clickedLink.emit(this.socialLink);
 
     setTimeout(() => {
-      this.clickedLink.emit("");
+      this.clickedLink.emit();
     }, 5000)
   }
 }

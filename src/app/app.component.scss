@@ -17,7 +17,7 @@ html {
     justify-content: center;
     flex-direction: column;
     align-items: center;
-    gap: 50px;
+    gap: 10px;
 }
 
 .sub-container {
@@ -96,4 +96,27 @@ html {
 .selected-link {
     text-align: center;
     padding: 10px;
+}
+
+.reset-selection {
+    cursor: pointer;
+    background-color: #33333311;
+    padding: 5px;
+    border-radius: 15px;
+}
+
+.reset-selection:hover {
+    background-color: #33333321;
+}
+
+.selected-link span {
+    text-decoration: underline;
+    cursor: grab;
+}
+
+.links-un_ {
+    background-color: #33333311;
+    text-align: center;
+    padding: 4px;
+    border-radius: 15px;
 }
