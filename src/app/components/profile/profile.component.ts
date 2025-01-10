@@ -24,7 +24,7 @@ export class ProfileComponent {
 
   @Output() passDataToRoot = new EventEmitter<SocialLink>();
 
-  handleData(data: any) {
+  handleData(data: SocialLink) {
     this.passDataToRoot.emit(data); // Emit data to parent (A)
   }
 }

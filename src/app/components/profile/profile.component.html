@@ -7,7 +7,7 @@
         <div class="social-links">
             @for (socialLink of userProfile.links; track $index) {
             <app-social-link [socialLink]="socialLink"
-                [class]="socialLink.name" (dataEmitter)="handleData($event)"></app-social-link>
+                [class]="socialLink.name" (socialLinkEmitter)="handleData($event)"></app-social-link>
             } @empty {
             <p class="links-un_">Links unavailable</p>
             }
