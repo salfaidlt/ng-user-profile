@@ -10,13 +10,12 @@ import SocialLink from '../../models/social-links';
 })
 export class SocialLinkComponent {
   @Input() socialLink: SocialLink | undefined;
-  @Output() clickedLink = new EventEmitter<SocialLink>();
+  @Output() socialLinkEmitter = new EventEmitter<SocialLink>();
 
-  getClickedLink() {
-    this.clickedLink.emit(this.socialLink);
-
-    setTimeout(() => {
-      this.clickedLink.emit();
-    }, 5000)
+  sendData() {
+    console.log('====================================');
+    console.log("event " + this.socialLink?.link);
+    console.log('====================================');
+    this.socialLinkEmitter.emit(this.socialLink); // Emit data to parent (B)
   }
 }

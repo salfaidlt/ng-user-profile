@@ -1,20 +1,11 @@
 <div class="container">
-  <div class="sub-container">
-    <!-- <h1>User Profile</h1> -->
-    <div>
-      <div class="profile-infos">
-        <app-user-profile></app-user-profile>
-        <app-user-location></app-user-location>
-      </div>
-      <div class="social-links">
-        @for (socialLink of linkTab; track $index) {
-        <app-social-link [socialLink]="socialLink" (clickedLink)="onClickedLink($event)"
-          [class]="socialLink.name"></app-social-link>
-        } @empty {
-          <p class="links-un_">Links unavailable</p>
-        }
-      </div>
-    </div>
+  <h1>Profiles</h1>
+  <div class="users">
+    @for (user of users; track $index) {
+      <app-profile [userProfile]="user" (passDataToRoot)="receiveData($event)"></app-profile>
+    } @empty {
+      <p>Users list is empty</p>
+    }
   </div>
   <div class="reset-selection" (click)="onResetLink()">
     @if (selectedLink.link != "") {

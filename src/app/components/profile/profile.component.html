@@ -1,0 +1,17 @@
+<div class="sub-container">
+    <div>
+        <div class="profile-infos">
+            <app-user-profile [image]="userProfile.image" [fullname]="userProfile.fullname"></app-user-profile>
+            <app-user-location [userLocation]="userProfile.location"></app-user-location>
+        </div>
+        <div class="social-links">
+            @for (socialLink of userProfile.links; track $index) {
+            <app-social-link [socialLink]="socialLink"
+                [class]="socialLink.name" (dataEmitter)="handleData($event)"></app-social-link>
+            } @empty {
+            <p class="links-un_">Links unavailable</p>
+            }
+        </div>
+    </div>
+
+</div>

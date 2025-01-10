@@ -11,7 +11,8 @@ html {
 }
 
 .container {
-    height: 100vh;
+    min-height: 95vh;
+    max-height: fit-content;
     width: 100%;
     display: flex;
     justify-content: center;
@@ -20,28 +21,10 @@ html {
     gap: 10px;
 }
 
-.sub-container {
-    border: 2px solid lightblue;
-    padding: 15px;
-    border-radius: 20px;
-    background-color: #fff;
-}
-
-.social-links {
+.users {
     display: flex;
-    flex-direction: column;
-    gap: 10px;
-}
-
-.profile-infos {
-    margin-bottom: 30px;
-}
-.social-links app-social-link  {
-    background: rgba(0, 0, 0, 0.265);
-    // display: inline-block;
-    padding: 10px;
-    border-radius: 10px;
-    text-align: center;
+    gap: 20px;
+    margin: 20px 0;
 }
 
 /* parent.component.css */

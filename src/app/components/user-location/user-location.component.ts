@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-user-location',
@@ -7,5 +7,6 @@ import { Component } from '@angular/core';
   styleUrl: './user-location.component.scss'
 })
 export class UserLocationComponent {
-
+  @Input()
+  userLocation!: string
 }
