@@ -9,7 +9,9 @@
   </div>
   <div class="reset-selection" (click)="onResetLink()">
     @if (selectedLink.link != "") {
-    <div class="selected-link">You selected <span>{{selectedLink.link}}</span> </div>
+    <div class="selected-link">
+      You selected <span>{{selectedLink.link}}
+      </span> </div>
     } @else {
     <div class="selected-link">please select a link</div>
     }
