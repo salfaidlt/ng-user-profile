@@ -1,8 +1,13 @@
 .social-link {
     background: rgba(0, 0, 0, 0.265);
-    // display: inline-block;
+    border: 1px solid rgba(0, 0, 0, 0.265);
     padding: 10px;
     border-radius: 10px;
     text-align: center;
     cursor: pointer;
+}
+
+.social-link:hover {
+    background: rgba(0, 0, 0, 0.087);
+    border: 1px solid rgba(0, 0, 0, 0.082);
 }

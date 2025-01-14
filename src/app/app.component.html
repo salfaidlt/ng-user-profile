@@ -2,9 +2,9 @@
   <h1>Profiles</h1>
   <div class="users">
     @for (user of users; track $index) {
-      <app-profile [userProfile]="user" (passDataToRoot)="receiveData($event)"></app-profile>
+    <app-profile [userProfile]="user" (passDataToRoot)="receiveData($event)"></app-profile>
     } @empty {
-      <p>Users list is empty</p>
+    <p>Users list is empty</p>
     }
   </div>
   <div class="reset-selection" (click)="onResetLink()">

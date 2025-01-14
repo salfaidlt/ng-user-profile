@@ -13,9 +13,6 @@ export class SocialLinkComponent {
   @Output() socialLinkEmitter = new EventEmitter<SocialLink>();
 
   sendData() {
-    console.log('====================================');
-    console.log("event " + this.socialLink?.link);
-    console.log('====================================');
     this.socialLinkEmitter.emit(this.socialLink); // Emit data to parent (B)
   }
 }
